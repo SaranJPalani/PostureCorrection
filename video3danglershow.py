@@ -1,0 +1,97 @@
+import cv2
+import mediapipe as mp
+import numpy as np
+
+# Input and output video paths
+input_path = "bench2.mp4"   # Replace with your video filename
+output_path = "2dbench2.mp4"
+
+# Mediapipe setup
+mp_drawing = mp.solutions.drawing_utils
+mp_pose = mp.solutions.pose
+pose = mp_pose.Pose()
+
+# Only show key joints (optional)
+# You can remove this list to go back to full display
+key_joints = ["left_knee", "right_knee", "left_elbow", "right_elbow", "left_shoulder", "right_shoulder"]
+
+# 2D-based joints map
+angle_joints = {
+    "left_elbow": ["LEFT_SHOULDER", "LEFT_ELBOW", "LEFT_WRIST"],
+    "right_elbow": ["RIGHT_SHOULDER", "RIGHT_ELBOW", "RIGHT_WRIST"],
+    "left_shoulder": ["LEFT_ELBOW", "LEFT_SHOULDER", "LEFT_HIP"],
+    "right_shoulder": ["RIGHT_ELBOW", "RIGHT_SHOULDER", "RIGHT_HIP"],
+    "left_hip": ["LEFT_SHOULDER", "LEFT_HIP", "LEFT_KNEE"],
+    "right_hip": ["RIGHT_SHOULDER", "RIGHT_HIP", "RIGHT_KNEE"],
+    "left_knee": ["LEFT_HIP", "LEFT_KNEE", "LEFT_ANKLE"],
+    "right_knee": ["RIGHT_HIP", "RIGHT_KNEE", "RIGHT_ANKLE"],
+    "left_wrist": ["LEFT_ELBOW", "LEFT_WRIST", "LEFT_INDEX"],
+    "right_wrist": ["RIGHT_ELBOW", "RIGHT_WRIST", "RIGHT_INDEX"],
+    "left_ankle": ["LEFT_KNEE", "LEFT_ANKLE", "LEFT_HEEL"],
+    "right_ankle": ["RIGHT_KNEE", "RIGHT_ANKLE", "RIGHT_HEEL"],
+    "spine": ["LEFT_HIP", "LEFT_SHOULDER", "RIGHT_HIP"],
+    "head": ["LEFT_SHOULDER", "NOSE", "RIGHT_SHOULDER"]
+}
+
+# 2D angle calculation
+def calculate_angle(a, b, c):
+    a = np.array([a[0], a[1]])
+    b = np.array([b[0], b[1]])
+    c = np.array([c[0], c[1]])
+    ab = a - b
+    cb = c - b
+    cosine_angle = np.dot(ab, cb) / (np.linalg.norm(ab) * np.linalg.norm(cb) + 1e-6)
+    return np.degrees(np.arccos(np.clip(cosine_angle, -1.0, 1.0)))
+
+# Video capture
+cap = cv2.VideoCapture(input_path)
+
+# Get video properties
+width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fps    = cap.get(cv2.CAP_PROP_FPS)
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+
+# Output video writer
+out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    results = pose.process(image)
+    image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+
+    if results.pose_landmarks:
+        lm = results.pose_landmarks.landmark
+
+        for joint, triplet in angle_joints.items():
+            if joint not in key_joints:
+                continue  # skip if not in your important joints list
+
+            try:
+                idx = [getattr(mp_pose.PoseLandmark, j).value for j in triplet]
+                coords = [(lm[i].x * width, lm[i].y * height) for i in idx]
+                angle = calculate_angle(*coords)
+
+                mid_idx = idx[1]
+                cx, cy = int(lm[mid_idx].x * width), int(lm[mid_idx].y * height)
+
+                cv2.circle(image, (cx, cy), 6, (255, 255, 255), -1)
+                cv2.putText(image, f"{joint}: {int(angle)}°", (cx + 10, cy - 10),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            except:
+                continue
+
+        mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
+
+    out.write(image)
+    cv2.imshow("Processing...", image)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+out.release()
+cv2.destroyAllWindows()
