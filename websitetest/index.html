@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Branch Posture Engine</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Branch Posture Engine (Rule-Based)</h1>
+    <div class="sub">MoveNet pose extraction + trainer-video-generated angle rules + phase FSM rep counting.</div>
+
+    <div class="card">
+      <h2>Session Setup</h2>
+      <label for="branchId">Branch ID</label>
+      <input id="branchId" placeholder="e.g. branch_downtown" />
+
+      <div class="row">
+        <div>
+          <label for="exerciseSelect">Exercise (whitelisted)</label>
+          <select id="exerciseSelect"></select>
+        </div>
+        <div>
+          <label for="viewSelect">Camera View</label>
+          <select id="viewSelect">
+            <option value="front">Front</option>
+            <option value="side">Side</option>
+          </select>
+        </div>
+      </div>
+      <small>Only configured exercises are allowed. Reference uploads are versioned per branch + exercise.</small>
+    </div>
+
+    <div class="grid" style="margin-top:16px;">
+      <div class="card">
+        <h2>1) Trainer Reference Upload</h2>
+        <label for="refFile">Reference video (multiple good reps)</label>
+        <input id="refFile" type="file" accept="video/*" />
+        <button id="buildTemplateBtn">Build / Update Branch Template</button>
+        <div id="templateStatus" class="status">No action yet.</div>
+      </div>
+
+      <div class="card">
+        <h2>2) Member Attempt Upload</h2>
+        <label for="attemptFile">Attempt video</label>
+        <input id="attemptFile" type="file" accept="video/*" />
+        <button id="evaluateBtn">Evaluate Attempt</button>
+        <div id="evalStatus" class="status">No action yet.</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h2>3) Visual Analysis Viewer</h2>
+      <div class="row">
+        <div>
+          <label for="viewerSource">Analysis Source</label>
+          <select id="viewerSource">
+            <option value="">Select analyzed video...</option>
+          </select>
+        </div>
+        <div style="display:flex;align-items:end;">
+          <button id="loadViewerBtn">Load Selected Analysis</button>
+        </div>
+      </div>
+
+      <div class="viewerWrap">
+        <video id="analysisVideo" controls playsinline></video>
+        <canvas id="analysisOverlay"></canvas>
+      </div>
+
+      <div id="viewerStatus" class="status viewerStatus">Analyze a video first, then load it here.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
