@@ -1,0 +1,519 @@
+{
+    "exercises":  [
+                      {
+                          "id":  "hammer_curl",
+                          "name":  "Hammer Curl",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist",
+                                                  "left_shoulder",
+                                                  "right_shoulder"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "overhead_extension",
+                          "name":  "Overhead Extension",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "bilateral_bayesian_curl",
+                          "name":  "Bilateral Bayesian Curl",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "press",
+                          "name":  "Press",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "deadlift",
+                          "name":  "Deadlift",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_hip",
+                                                  "right_hip"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "overheadpress",
+                          "name":  "OverheadPress",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_shoulder",
+                                                  "right_shoulder"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "chin_up",
+                          "name":  "Chin Up",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist",
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "head",
+                                                  "spine"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "machine_face_pull",
+                          "name":  "Machine Face Pull",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "bent_over",
+                          "name":  "Bent Over",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "machine_pull_down",
+                          "name":  "Machine Pull Down",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist",
+                                                  "spine"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "skull_crusher",
+                          "name":  "Skull Crusher",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "pushups",
+                          "name":  "Pushups",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "barbell_t_row",
+                          "name":  "Barbell T Row",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "inclinepress",
+                          "name":  "InclinePress",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "reardelt",
+                          "name":  "RearDelt",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "closegrip_bench",
+                          "name":  "Closegrip bench",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "dips",
+                          "name":  "Dips",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "right_hip",
+                                                  "left_hip",
+                                                  "right_knee",
+                                                  "left_knee"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "lateralraise",
+                          "name":  "LateralRaise",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "dumbell_curl",
+                          "name":  "Dumbell Curl",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "preacher_curl",
+                          "name":  "Preacher Curl",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "barbell_upright",
+                          "name":  "Barbell upright",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "barbellrows",
+                          "name":  "BarbellRows",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_shoulder",
+                                                  "right_shoulder"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "declinepress",
+                          "name":  "DeclinePress",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "cable_pushdown",
+                          "name":  "Cable Pushdown",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_wrist",
+                                                  "right_wrist",
+                                                  "left_shoulder",
+                                                  "right_shoulder"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "singlearm_pulldown",
+                          "name":  "singlearm Pulldown",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "right_wrist",
+                                                  "left_wrist"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "cablefly",
+                          "name":  "CableFly",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "arnoldpress",
+                          "name":  "ArnoldPress",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_elbow",
+                                                  "right_elbow",
+                                                  "left_shoulder",
+                                                  "right_shoulder"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      },
+                      {
+                          "id":  "pecfly",
+                          "name":  "PecFly",
+                          "allowedViews":  [
+                                               "front",
+                                               "side"
+                                           ],
+                          "importantAngles":  [
+                                                  "left_shoulder",
+                                                  "right_shoulder",
+                                                  "left_elbow",
+                                                  "right_elbow"
+                                              ],
+                          "minReferenceReps":  1,
+                          "sourceVideos":  [
+
+                                           ]
+                      }
+                  ]
+}
